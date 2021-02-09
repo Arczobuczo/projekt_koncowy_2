@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page - Meetings</title>
+    <th:block th:replace="navbar/navbar :: headScripts"></th:block>
+
+           <link rel="stylesheet" href="homePage.css">
+
+</head>
+<body>
+
+<div th:replace="navbar/navbar :: navbar"></div>
+
+    <main>
+            <section class="py-5 text-center container">
+                <div class="row py-lg-1">
+                        <div class="col-lg-9 col-md-8 mx-auto">
+                            <h1 class="solid">Welcome to the website!!</h1>
+                            <p class="lead text-muted">This page is dedicated to creating new appointments and events :)</p>
+    <!--                                        <p>-->
+    <!--                                            <a href="#" class="btn btn-primary my-2">Main call to action</a>-->
+    <!--                                            <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
+    <!--                                        </p>-->
+                        </div>
+                 </div>
+            </section>
+    </main>
+
+<div th:replace="showMeeting/showMeetingForm :: showMeetings"></div>
+
+</body>
+</html>

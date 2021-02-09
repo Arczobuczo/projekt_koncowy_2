@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <th:block th:replace="navbar/navbar :: headScripts"></th:block>
+    <title>Log In to Meeting Place</title>
+</head>
+<body>
+<div th:replace="navbar/navbar :: navbar"></div>
+
+<br><br>
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 contents">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <div class="form-block">
+                            <div class="mb-4">
+                                <h3>Log In to Meeting Place</h3>
+                            </div>
+                            <form th:action="@{/login-user-submit-correct}" method="post">
+                                <div class="form-group first">
+                                    <label>Enter Your E-mail:</label>
+                                    <input type="email" name="email" class="form-control" placeholder="Enter Your E-mail...">
+                                </div>
+                                <div class="form-group last mb-4">
+                                    <label>Password:</label>
+                                    <input type="password" name="password" class="form-control" placeholder="Enter Your password...">
+                                </div>
+                                <input type="submit" value="Log In" class="btn btn-secondary">
+                            </form>
+                            <div th:if="${error != null}">
+                                <span th:text="${error}"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
